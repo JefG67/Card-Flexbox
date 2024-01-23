@@ -1,0 +1,28 @@
+
+* {margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: "Poppins";
+}
+
+#container {
+    display: flex;  /* sa met les elements cote a cote */
+    min-height:100vh;
+    background: rgba(68,117,136,0.548);
+}
+
+
+.card {
+    background: white;
+    width: 300px;  /* pour la largeur de la carte */
+    border-radius: 10px; /*pour faire un arrondi sur la carte*/
+}
+
+.card-header {
+    height: 200px; /* hauteur de l'image */
+}
+
+.card-header img{
+    height: 100%;
+    width: 100%;
+}
