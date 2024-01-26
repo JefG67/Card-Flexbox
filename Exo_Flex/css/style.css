@@ -1,4 +1,7 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 * {margin:0;
    padding:0;
    box-sizing: border-box;
@@ -9,6 +12,9 @@
     display: flex;  /* sa met les elements cote a cote */
     min-height:100vh;
     background: rgba(68,117,136,0.548);
+    justify-content: center;
+    align-items: center;
+    gap:20px;
 }
 
 
@@ -16,13 +22,77 @@
     background: white;
     width: 300px;  /* pour la largeur de la carte */
     border-radius: 10px; /*pour faire un arrondi sur la carte*/
+    overflow: hidden; /* pour supprimer tous ce qui est en dehors de la carte*/
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;;
+    transition: 0.6s;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+
 }
 
 .card-header {
     height: 200px; /* hauteur de l'image */
+    position: relative;
+    overflow: hidden;
+
+    
+}
+.card:hover .coeur{
+    left: 0;
+
+}
+
+.card:hover .card-header img {
+    transform: scale(1.1)
 }
 
 .card-header img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
+    filter: grayscale(1); /* pour changer la couleur de l'image en noir et blanc*/
+    transition: 1s;
+    
+    
+}
+.card-header img:hover { /* "hover"pour remettre la couleur quand on passe la souris*/
+    filter:grayscale(0);
+
+}
+
+.card-text{
+    padding: 30px;
+}
+.card-text h1{
+    font-size: 25px;
+     margin-bottom: 10px;
+     font-weight: 700;
+}
+
+.card-text p{
+    font-size: 14px;
+    color: rgb(147,147,147);
+    font-weight: 300;
+}
+
+.coeur {
+    width: 50px;
+    height: 50px;
+    background: rgb(237, 53, 96);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 20px;
+    left: -50px;
+    transition: 0.5s;
+    
+}
+.coeur a{
+    color: white;
 }
