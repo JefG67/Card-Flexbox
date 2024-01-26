@@ -5,7 +5,7 @@
 * {margin:0;
    padding:0;
    box-sizing: border-box;
-   font-family: "Poppins";
+   font-family: "Poppins"; /*la polilce d'ecriture utilisé*/
 }
 
 #container {
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     gap:20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* pour ajuster la page pour un telephone*/
 }
 
 
@@ -24,12 +24,12 @@
     width: 300px;  /* pour la largeur de la carte */
     border-radius: 10px; /*pour faire un arrondi sur la carte*/
     overflow: hidden; /* pour supprimer tous ce qui est en dehors de la carte*/
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;; /*Pour donner un ombrage */
     transition: 0.6s;
 }
 
 .card:hover{
-    transform: translateY(-15px);
+    transform: translateY(-15px); /*Pour monter l'image de 15px a utiliser avec translate*/
 
 }
 
@@ -46,20 +46,20 @@
 }
 
 .card:hover .card-header img {
-    transform: scale(1.1)
+    transform: scale(1.1) /*Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.*/
 }
 
 .card-header img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Selon la valeur utilisée pour object-fit, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient. */
     filter: grayscale(1); /* pour changer la couleur de l'image en noir et blanc*/
-    transition: 1s;
+    transition: 1s; /*Elle permet de définir la transition entre deux états d'un élément. ici c'est 1s */
     
     
 }
-.card-header img:hover { /* "hover"pour remettre la couleur quand on passe la souris*/
-    filter:grayscale(0);
+.card:hover img { /* La pseudo-classe :hover permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.comme la couleur ici */
+    filter:grayscale(0); /*enlever le noir et blanc et remettre les couleurs */
 
 }
 
@@ -67,7 +67,7 @@
     padding: 30px;
 }
 .card-text h1{
-    font-size: 25px;
+     font-size: 25px;
      margin-bottom: 10px;
      font-weight: 700;
 }
@@ -92,6 +92,7 @@
     font-size: 20px;
     left: -50px;
     transition: 0.5s;
+    border-radius: 10px 0 0 0 ;
     
 }
 .coeur a{
