@@ -2,7 +2,7 @@
 
 <h1>Exercice FlexCard </h1>
 
-En vous basant sur les ressources données, vous devez réaliser 3 cartes avec une image (en haut) et un texte a l'interieur(en bas)
+En vous basant sur les ressources données, vous devez réaliser 3 cartes avec une image (en haut) et un texte a l'interieur(en bas)<br>
 Chaque "card" a une largeur de 300px, un arrondi (border-radius) de 10px<br>
 L'entête (card-header) de chaque card a une hauteur de 200px<br>
 La zone de texte (card-text) a une marge interne de 30px (le titre a une taille de 25px et une marge inférieure de 10px. Le texte de l'article a une taille de 14px) <br>
